@@ -1,0 +1,68 @@
+::selection {background: transparent;}
+p{margin: 0; font: 12px/150% Arial; text-align: center; color: #888;}
+p a{color: #888;}
+
+body{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	align-items: center;
+}
+
+@media screen and (max-width:768px) {
+	#buttons{
+		bottom: 0px;
+		left: 20px;
+		top: unset !important;
+	}
+	#board{
+		height: 300px;
+	}
+}
+
+#buttons{text-align: center;display: flex; flex-direction: column; align-items: center;position: fixed;z-index: 999999;right:10px;top: 30px;}
+#buttons button{
+	cursor: pointer;
+	outline: none;	
+	padding: 10px 20px;
+	margin: 15px 2px;
+	border: 0;
+	border-radius: 4px;
+	background: #717171;
+	font: 14px Arial;
+	text-align: center;
+	color: #fff;
+}
+
+#buttons input{
+	padding: 8px 20px;
+	outline: none;
+}
+#buttons button:hover{background: #c2c2c2;}
+
+#board{
+	margin: 0 auto;
+	margin-top: 80px;
+	border-radius: 4px;
+}
+#board span{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	background-color: #ededed;
+}
+#board span.number{
+	cursor: pointer;
+	font: 14px/80px Arial;
+	text-align: center;
+	color: rgb(72, 72, 72);
+}
+#board span.empty{background: transparent;}
+
+
+#board.animate span{
+	-webkit-transition: 0.30s left, 0.30s top;
+ 	transition: 0.30s left, 0.30s top;
+}
